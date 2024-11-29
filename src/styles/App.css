@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  
 }
 
 .App-logo {
@@ -47,6 +47,42 @@
   font-size: 20px;
   margin: 0 10px;
 }
+
+.Navbar-list {
+  display: flex;
+  list-style-type: none; /* Removes the default bullet points */
+  padding: 0;
+  margin: 0 10px;
+}
+
+.Navbar-list li{
+  margin:0 20px;
+  font-weight: 600;
+}
+
+.Navbar-sidebar {
+  display: flex;
+  flex-direction: row;
+}
+
+.Navbar {
+  background-color: #D1E3FF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  
+}
+
+
+
+.Navbar-text {
+  color: #0B55CD;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 5px;
+}
+
 
 
 @keyframes App-logo-spin {
