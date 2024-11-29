@@ -1,5 +1,5 @@
 .App {
-  
+
 }
 
 .App-logo {
@@ -31,11 +31,17 @@
 
 .App-footer{
   background-color: #0A0F43;
-  min-height: 10vh;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    align-items: center;
 }
 
 .App-footer-text{
   color: white;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .App-header-banner{
@@ -71,7 +77,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 30px;
-  
 }
 
 
