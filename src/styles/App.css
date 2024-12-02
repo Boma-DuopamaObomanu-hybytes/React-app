@@ -1,5 +1,5 @@
 .App {
-
+  color: #000;
 }
 
 .App-logo {
@@ -31,11 +31,12 @@
 
 .App-footer{
   background-color: #0A0F43;
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-content: flex-end;
-    align-items: center;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-footer-text{
@@ -87,6 +88,45 @@
   font-size: 25px;
   margin: 0 5px;
 }
+
+.App-footer-social-container-images{
+  background-color: white;
+  padding: 10px 10px;
+}
+
+.App-footer-container-image{
+  width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 80px;
+    background-color: #0355cc;
+    color: #ffffff;
+}
+.App-footer-info-container{
+  display: flex;
+  flex-direction: row ;
+}
+.App-footer-info-container-text{
+  color: white;
+}
+.App-footer-section-info-container{
+  color: #000;
+  
+}
+
+hr {
+  margin: 40px 10px !important;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 1 !important;
+}
+
+
 
 
 
