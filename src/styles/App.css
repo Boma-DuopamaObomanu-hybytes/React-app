@@ -126,6 +126,19 @@ hr {
   opacity: 1 !important;
 }
 
+.App-form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 30px !important;
+}
+
 
 
 

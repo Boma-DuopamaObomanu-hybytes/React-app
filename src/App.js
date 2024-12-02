@@ -37,6 +37,20 @@ function App() {
         </div>
       </div>
 
+      <section>
+        <div  className="App-form">
+          <h3>CONTACT US</h3>
+
+          <input type="text" placeholder="Name"  />
+
+          <input type="text" placeholder="Phone Number" />
+
+          <input type="text" placeholder="Email " />
+
+          <input type="text" placeholder="Message" />
+        </div>
+      </section>
+
       <footer className="App-footer">
         <p className="App-footer-text">Get in Touch</p>
 
