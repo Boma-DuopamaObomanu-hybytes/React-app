@@ -1,8 +1,20 @@
+import React from "react";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import GoogleMapReact from "google-map-react";
 
 function App() {
+  const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -37,17 +49,46 @@ function App() {
         </div>
       </div>
 
+
       <section>
-        <div  className="App-form">
-          <h3>CONTACT US</h3>
+        <h3>WHAT OUR CLIENT SAYS</h3>
+        <div>
+          <div></div>
+          <div></div>
+          <button><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button><button><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </section>
 
-          <input type="text" placeholder="Name"  />
+      <section>
+        <div className="App-contact-us">
+          <div className="App-form">
+            <h3>CONTACT US</h3>
 
-          <input type="text" placeholder="Phone Number" />
+            <input type="text" placeholder="Name" className="input-shadow" />
 
-          <input type="text" placeholder="Email " />
+            <input type="text" placeholder="Phone Number" className="input-shadow" />
 
-          <input type="text" placeholder="Message" />
+            <input type="text" placeholder="Email "  className="input-shadow"/>
+
+            <textarea type="text" placeholder="Message" className="input-shadow" />
+
+
+            <button>SEND</button>
+
+          </div>
+          <div style={{  height: "50vh", width: "40%" }}>
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: "" }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+            >
+              <AnyReactComponent
+                lat={59.955413}
+                lng={30.337844}
+                text="My Marker"
+              />
+            </GoogleMapReact>
+          </div>
         </div>
       </section>
 
