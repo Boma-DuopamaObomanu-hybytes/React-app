@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import GoogleMapReact from "google-map-react";
+import "font-awesome/css/font-awesome.min.css";
+import client2 from "./images/images/client-2.jpg";
+import client1 from "./images/images/client-1.jpg";
 
 function App() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const testimonials = [
+    {
+      name: "Jorch Morik",
+      image: client1,
+      text: "Chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      rating: 5,
+    },
+    {
+      name: "Jorch Morik",
+      image: client2,
+      text: "Chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+      rating: 5,
+    },
+  ];
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
   const defaultProps = {
@@ -49,14 +81,28 @@ function App() {
         </div>
       </div>
 
-
       <section>
         <h3>WHAT OUR CLIENT SAYS</h3>
-        <div>
-          <div></div>
-          <div></div>
-          <button><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button><button><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-        </div>
+        <div className="testimonial-container">
+      <div className="card">
+        <img
+          src={testimonials[currentIndex].image}
+          alt={testimonials[currentIndex].name}
+          className="profile-img"
+        />
+        <h3>{testimonials[currentIndex].name}</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>{testimonials[currentIndex].text}</p>
+      </div>
+      <div className="buttons">
+        <button onClick={handlePrev} className="btn">
+          <i className="fa fa-long-arrow-left"></i>
+        </button>
+        <button onClick={handleNext} className="btn">
+          <i className="fa fa-long-arrow-right"></i>
+        </button>
+      </div>
+    </div>
       </section>
 
       <section>
@@ -66,17 +112,23 @@ function App() {
 
             <input type="text" placeholder="Name" className="input-shadow" />
 
-            <input type="text" placeholder="Phone Number" className="input-shadow" />
+            <input
+              type="text"
+              placeholder="Phone Number"
+              className="input-shadow"
+            />
 
-            <input type="text" placeholder="Email "  className="input-shadow"/>
+            <input type="text" placeholder="Email " className="input-shadow" />
 
-            <textarea type="text" placeholder="Message" className="input-shadow" />
-
+            <textarea
+              type="text"
+              placeholder="Message"
+              className="input-shadow"
+            />
 
             <button>SEND</button>
-
           </div>
-          <div style={{  height: "50vh", width: "40%" }}>
+          <div style={{ height: "50vh", width: "40%" }}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: "" }}
               defaultCenter={defaultProps.center}
