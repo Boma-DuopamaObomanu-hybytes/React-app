@@ -6,6 +6,7 @@ import GoogleMapReact from "google-map-react";
 import "font-awesome/css/font-awesome.min.css";
 import client2 from "./images/images/client-2.jpg";
 import client1 from "./images/images/client-1.jpg";
+import s1 from "./images/images/s1.png";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,27 +83,52 @@ function App() {
       </div>
 
       <section>
-        <h3>WHAT OUR CLIENT SAYS</h3>
+        <h4>OUR SERVICES</h4>
+        <div className="card">
+          <h5>Maintenance</h5>
+          <img src={s1} alt="maintenance" style={{width:"50px", height:"50px"}}/>
+          <p>when looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal</p>
+        </div>
+        <div className="card">
+        <p>Electrical</p>
+
+        
+              
+        </div>
+        <div className="card">
+        <p>Plumbing</p>
+        </div>
+      </section>
+
+      <section>
+        <h4>WHAT OUR CLIENT SAYS</h4>
         <div className="testimonial-container">
-      <div className="card">
-        <img
-          src={testimonials[currentIndex].image}
-          alt={testimonials[currentIndex].name}
-          className="profile-img"
-        />
-        <h3>{testimonials[currentIndex].name}</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>{testimonials[currentIndex].text}</p>
-      </div>
-      <div className="buttons">
-        <button onClick={handlePrev} className="btn">
-          <i className="fa fa-long-arrow-left"></i>
-        </button>
-        <button onClick={handleNext} className="btn">
-          <i className="fa fa-long-arrow-right"></i>
-        </button>
-      </div>
-    </div>
+          <div className="card">
+            <img
+              src={testimonials[currentIndex].image}
+              alt={testimonials[currentIndex].name}
+              className="profile-img"
+            />
+            <h3>{testimonials[currentIndex].name}</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>{testimonials[currentIndex].text}</p>
+          </div>
+          <div className="buttons">
+            <button onClick={handlePrev} className="btn">
+              <i
+                className="fa fa-long-arrow-left"
+                style={{ color: "white" }}
+              ></i>
+            </button>
+            <button onClick={handleNext} className="btn">
+              <i
+                className="fa fa-long-arrow-right"
+                style={{ color: "white" }}
+              ></i>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section>

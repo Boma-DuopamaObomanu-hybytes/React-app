@@ -195,18 +195,17 @@ p {
 }
 
 .buttons {
-  margin-top: 10px;
+
 }
 
 .btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 5px;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #0355cc !important; /* Forces this style to override others */
+  outline: none;
+  margin: 0 20px;
 }
+
 
 .btn:hover {
   background-color: #0056b3;
@@ -231,6 +230,10 @@ textarea {
 
 .App-form {
   width: 100%;
+}
+
+h4{
+  text-align: center;
 }
 
 
