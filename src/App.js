@@ -7,6 +7,9 @@ import "font-awesome/css/font-awesome.min.css";
 import client2 from "./images/images/client-2.jpg";
 import client1 from "./images/images/client-1.jpg";
 import s1 from "./images/images/s1.png";
+import s2 from "./images/images/s2.png";
+import s3 from "./images/images/s3.png";
+import profImage from "./images/images/professional-img.png";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,23 +86,56 @@ function App() {
       </div>
 
       <section>
-        <h4>OUR SERVICES</h4>
-        <div className="card">
-          <h5>Maintenance</h5>
-          <img src={s1} alt="maintenance" style={{width:"50px", height:"50px"}}/>
-          <p>when looking at its layout. The point of using Lorem Ipsum is
-          that it has a more-or-less normal</p>
-        </div>
-        <div className="card">
-        <p>Electrical</p>
+        <div className="App-professional-layout">
 
-        
-              
-        </div>
-        <div className="card">
-        <p>Plumbing</p>
         </div>
       </section>
+
+      <section>
+        <h4>OUR SERVICES</h4>
+        <div className="App-services-container">
+          <div className="card">
+            <h5>Maintenance</h5>
+            <img
+              src={s1}
+              alt="maintenance"
+              style={{ width: "50px", height: "50px" }}
+            />
+            <p>
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+          <div className="card">
+            <h5>Electrical</h5>
+            <img
+              src={s2}
+              alt="maintenance"
+              style={{ width: "50px", height: "50px" }}
+            />
+            <p>
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+          <div className="card">
+            <h5>Plumbing</h5>
+            <img
+              src={s3}
+              alt="maintenance"
+              style={{ width: "50px", height: "50px" }}
+            />
+            <p>
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div style={{alignSelf : "center", justifyContent : "center"}}> 
+        <button>VIEW MORE</button>
+      </div>
 
       <section>
         <h4>WHAT OUR CLIENT SAYS</h4>

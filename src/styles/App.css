@@ -176,6 +176,7 @@ button {
   padding: 20px;
   text-align: center;
   width: 100%;
+  margin: 10px 10px;
 }
 
 .profile-img {
@@ -195,7 +196,6 @@ p {
 }
 
 .buttons {
-
 }
 
 .btn {
@@ -205,7 +205,6 @@ p {
   outline: none;
   margin: 0 20px;
 }
-
 
 .btn:hover {
   background-color: #0056b3;
@@ -232,11 +231,18 @@ textarea {
   width: 100%;
 }
 
-h4{
-  text-align: center;
+.App-services-container {
+  display: flex;
+  padding: 10px 10px;
 }
 
+.App-professional-layout {
+  background-color: #000000;
+}
 
+h4 {
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
   from {
