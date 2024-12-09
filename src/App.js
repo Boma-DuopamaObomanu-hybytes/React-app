@@ -87,7 +87,24 @@ function App() {
 
       <section>
         <div className="App-professional-layout">
-
+          <img
+            src={profImage}
+            alt="professionalImage"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <div>
+            <h2>
+              We Provide Professional
+              <br></br>
+              Home Services.
+            </h2>
+            <p>
+              randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure
+              there isn't anything embarrassing hidden in the middle of text.
+              All randomised words which don't look even slightly
+            </p>
+          </div>
         </div>
       </section>
 
@@ -133,7 +150,7 @@ function App() {
         </div>
       </section>
 
-      <div style={{alignSelf : "center", justifyContent : "center"}}> 
+      <div style={{ alignSelf: "center", justifyContent: "center" }}>
         <button>VIEW MORE</button>
       </div>
 
