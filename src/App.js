@@ -10,6 +10,8 @@ import s1 from "./images/images/s1.png";
 import s2 from "./images/images/s2.png";
 import s3 from "./images/images/s3.png";
 import profImage from "./images/images/professional-img.png";
+import aboutImage from "./images/images/about-img.jpg";
+import slider from "./images/images/slider-img.png";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,6 +88,46 @@ function App() {
       </div>
 
       <section>
+        <div>
+          <h1>
+            Repair and Maintenance 
+            Services
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum
+            voluptatem adipisci. Quos molestiae saepe dicta nobis pariatur,
+            tempora iusto, ad possimus soluta hic praesentium mollitia
+            consequatur beatae, aspernatur culpa.
+          </p>
+          <a href="">
+                Contact Us
+              </a>
+        </div>
+        <div>
+          <img src={slider} alt="sliderImage" style={{width:50,height:50}}/>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img
+            src={aboutImage}
+            alt="aboutImage"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <h2>About Us</h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomisedThere are many variations of passages of Lorem
+            Ipsum available, but the majority have suffered alteration in some
+            form, by injected humour, or randomised
+          </p>
+          <a href="">Read More</a>
+        </div>
+      </section>
+
+      <section> 
         <div className="App-professional-layout">
           <img
             src={profImage}
@@ -104,6 +146,7 @@ function App() {
               there isn't anything embarrassing hidden in the middle of text.
               All randomised words which don't look even slightly
             </p>
+            <a href="">Read More</a>
           </div>
         </div>
       </section>
