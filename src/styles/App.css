@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #000000;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,8 +50,9 @@
   display: flex;
 }
 .App-header-text {
-  font-size: 20px;
+  font-size: 17px;
   margin: 0 10px;
+  color: white;
 }
 
 .Navbar-list {
@@ -150,6 +151,13 @@ button {
   width: 20%;
 }
 
+.App-h1-text {
+  color: #0b55cd;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .input-shadow {
   width: 70%;
   padding: 10px;
@@ -178,6 +186,13 @@ button {
   text-align: center;
   width: 100%;
   margin: 10px 10px;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 20px; /* Space between the two cards */
+  justify-content: center;
+  width: 100%;
 }
 
 .profile-img {
@@ -234,74 +249,112 @@ textarea {
 
 .App-services-container {
   display: flex;
-  padding: 10px 10px;
+  padding: 50px 100px;
+  width: 80%;
+  justify-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  justify-self: center;
 }
 
 .App-professional-layout {
   display: flex;
   flex-direction: row;
-  background-color: #D1E3FF;
+  background-color: #d1e3ff;
+  padding: 50px 150px;
 }
 
 .App-main-layout {
   display: flex;
   flex-direction: row;
-  background-color: #D1E3FF;
+  justify-content: space-between;
+  align-items: center; /* Vertically aligns items */
+  background-color: #d1e3ff;
+  padding: 40px; /* Adds spacing around the content */
 }
 
-.App-context-header{
+.App-text-container {
+  max-width: 25%; /* Ensures text takes up half the width */
+}
+
+.App-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-slider-image {
+  width: 100%;
+  max-width: 500px; /* Limits the image size */
+  height: auto;
+}
+
+.App-professional-container-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.App-context-header {
   font-weight: bold;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 50px;
 }
 
 .App-link-blue {
   margin-top: 15px;
-    display: inline-block;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-transform: uppercase;
-    padding: 10px 45px;
-    background-color: #0355cc;
-    border: 1px solid #0355cc;
-    border-radius: 2px;
-    color: #ffffff;
-    text-decoration: none;
-    justify-content: center;
-    font-weight: 900;
-
-  
+  display: inline-block;
+  font-family: "Merriweather Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: #0355cc;
+  border: 1px solid #0355cc;
+  border-radius: 2px;
+  color: #ffffff;
+  text-decoration: none;
+  justify-content: center;
+  font-weight: 900;
 }
 
 .App-link-orange {
   display: inline-block;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-transform: uppercase;
-    padding: 10px 45px;
-    background-color: #ff8a1d;
-    border: 1px solid #ff8a1d;
-    border-radius: 5px;
-    color: #ffffff;
-    margin-top: 15px;
-    text-decoration: none;
-    font-weight: 900;
+  background-color: #ff7c2c;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
+.App-section {
+  background-color: #d1e3ff;
+  padding: 50px 100px; /* Adjusts space around the section */
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
 
-
-.App-about-layout{
+.App-about-layout {
   display: flex;
   flex-direction: row;
   background-color: white;
+  padding: 60px 150px;
+}
+
+.App-about-container-text {
+  width: 40%;
 }
 
 .feature_section {
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .feature_section .feature_container {
@@ -312,18 +365,18 @@ textarea {
 
 .feature_section .feature_container .box {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   margin: 0 10px;
   padding: 45px 15px;
@@ -332,7 +385,7 @@ textarea {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .feature_section .feature_container .box .img-box {
@@ -356,23 +409,25 @@ textarea {
 .feature_section .feature_container .box .name {
   margin-top: 20px;
   text-transform: uppercase;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   margin-bottom: 0;
 }
 
-.feature_section .feature_container .box:hover, .feature_section .feature_container .box.active {
+.feature_section .feature_container .box:hover,
+.feature_section .feature_container .box.active {
   background-color: #ff8a1d;
   color: #ffffff;
 }
 
-.feature_section .feature_container .box:hover .img-box svg, .feature_section .feature_container .box.active .img-box svg {
+.feature_section .feature_container .box:hover .img-box svg,
+.feature_section .feature_container .box.active .img-box svg {
   fill: #ffffff;
 }
 
-.feature_section .feature_container .box:hover .img-box svg path, .feature_section .feature_container .box.active .img-box svg path {
+.feature_section .feature_container .box:hover .img-box svg path,
+.feature_section .feature_container .box.active .img-box svg path {
   fill: #ffffff;
 }
-
 
 h4 {
   text-align: center;
