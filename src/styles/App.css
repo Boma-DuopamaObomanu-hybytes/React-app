@@ -36,6 +36,7 @@
   align-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding: 50px 50px;
 }
 
 .App-footer-text {
@@ -107,6 +108,7 @@
 .App-footer-info-container {
   display: flex;
   flex-direction: row;
+  width: 70%;
 }
 .App-footer-info-container-text {
   color: white;
@@ -241,6 +243,11 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
+  padding: 50px 100px;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
 }
 
 .App-form {
@@ -310,7 +317,8 @@ textarea {
 }
 
 .App-link-blue {
-  margin-top: 15px;
+  margin-top: 35px;
+  margin-bottom: 100px;
   display: inline-block;
   font-family: "Merriweather Sans", sans-serif;
   text-transform: uppercase;
