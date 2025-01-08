@@ -1,0 +1,77 @@
+{
+  "getInTouch": "Get in Touch",
+  "randomGeneratedText": "Random Generated Text",
+  "followUs": "Follow Us",
+  "allRightsReserved": " © 2024 All Rights Reserved By",
+  "freeHtmlTemplates": "Free Html Templates",
+  "contactUsHeader": "CONTACT US",
+  "namePlaceholder": "Name",
+  "phonePlaceholder": "Phone Number",
+  "emailPlaceholder": "Email",
+  "messagePlaceholder": "Message",
+  "sendButton": "SEND",
+  "markerText": "My Marker",
+  "callLabel": "Call",
+  "phoneNumber": "+01 123455678990",
+  "emailLabel": "Email",
+  "emailAddress": "demo@gmail.com",
+  "brandName": "INANCE",
+  "navHome": "Home",
+  "navAbout": "About",
+  "navServices": "Services",
+  "navContactUs": "Contact Us",
+  "aboutTitle": "About Us",
+  "aboutDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.",
+  "readMore": "Read More",
+  "aboutImageAlt": "About Us Image",
+  "ourServices": "OUR SERVICES",
+  "viewMore": "View More",
+  "repairText" : "Repair",
+  "improveText" : "Improve",
+  "maintainText" : "Maintain",
+  "switchToEnglish" : "Switch To English",
+  "switchToArabic": "التبديل إلى العربية",
+  "services": {
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.",
+      "alt": "Maintenance service"
+    },
+    "electrical": {
+      "title": "Electrical",
+      "description": "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.",
+      "alt": "Electrical service"
+    },
+    "plumbing": {
+      "title": "Plumbing",
+      "description": "When looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.",
+      "alt": "Plumbing service"
+    }
+  },
+   "professional": {
+    "imageAlt": "Professional Home Services Image",
+    "title": "We Provide Professional \nHome Services.",
+    "description": "Randomized words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+    "readMore": "Read More"
+  },
+  "header": "WHAT OUR CLIENT SAYS",
+  "testimonials": [
+    {
+      "name": "Jorch Morik",
+      "text": "Chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words."
+    },
+    {
+        "name": "Jorch Morik",
+        "text": "Another testimonial here."
+      }
+  ],
+  "buttons": {
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "repairMaintain": {
+    "header": "Repair and Maintenance Services",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum voluptatem adipisci. Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic praesentium mollitia consequatur beatae, aspernatur culpa.",
+    "contactUs": "Contact Us"
+  }
+}

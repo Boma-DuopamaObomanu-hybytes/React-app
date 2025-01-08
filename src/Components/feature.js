@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-function feature() {
+function Feature() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <section class="feature_section">
@@ -25,7 +28,7 @@ function feature() {
                   </g>
                 </svg>
               </div>
-              <h5 class="name">Repair</h5>
+              <h5 class="name">{t("repairText")}</h5>
             </div>
             <div class="box active">
               <div class="img-box">
@@ -43,7 +46,7 @@ function feature() {
                   </g>
                 </svg>
               </div>
-              <h5 class="name">Improve</h5>
+              <h5 class="name">{t("improveText")}</h5>
             </div>
             <div class="box">
               <div class="img-box">
@@ -58,7 +61,7 @@ function feature() {
                   <path d="M46,31H42.422a1,1,0,0,1,0-2H46a1,1,0,0,0,.916-1.4A5.992,5.992,0,0,0,36.231,27h-8.04a5.992,5.992,0,0,0-10.685.6,1,1,0,0,0,.916,1.4H22a1,1,0,0,1,0,2H18.422a1,1,0,0,0-.916,1.4,5.992,5.992,0,0,0,10.685.6h8.04a5.992,5.992,0,0,0,10.685-.6A1,1,0,0,0,46,31Zm-4.578,3a4,4,0,0,1-3.662-2.4,1,1,0,0,0-.916-.6H27.578a1,1,0,0,0-.916.6,3.991,3.991,0,0,1-6.3,1.4H22a3,3,0,0,0,0-6H20.359a3.991,3.991,0,0,1,6.3,1.4,1,1,0,0,0,.916.6h9.266a1,1,0,0,0,.916-.6,3.991,3.991,0,0,1,6.3-1.4h-1.64a3,3,0,0,0,0,6h1.64A3.988,3.988,0,0,1,41.422,34Z"></path>
                 </svg>
               </div>
-              <h5 class="name">Maintain</h5>
+              <h5 class="name">{t("maintainText")}</h5>
             </div>
           </div>
         </div>
@@ -67,4 +70,4 @@ function feature() {
   );
 }
 
-export default feature;
+export default Feature;

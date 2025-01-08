@@ -1,7 +1,10 @@
 import React from 'react'
 import GoogleMapReact from "google-map-react";
+import { useTranslation } from "react-i18next";
 
-export default function contactUs() {
+export default function ContactUs() {
+
+    const { t } = useTranslation(); 
 
     const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -19,31 +22,31 @@ export default function contactUs() {
         <section>
           <div className="App-contact-us">
             <div className="App-form">
-              <h3>CONTACT US</h3>
+              <h3>{t("contactUsHeader")}</h3>
 
-              <input type="text" placeholder="Name" className="input-shadow" />
+              <input type="text" placeholder={t("namePlaceholder")} className="input-shadow" />
 
               <input
                 type="text"
-                placeholder="Phone Number"
+                placeholder={t("phonePlaceholder")}
                 className="input-shadow"
               />
 
               <input
                 type="text"
-                placeholder="Email "
+                placeholder={t("emailPlaceholder")}
                 className="input-shadow"
               />
 
               <textarea
                 type="text"
-                placeholder="Message"
+                placeholder={t("messagePlaceholder")}
                 className="input-shadow"
               />
 
               <div>
                 <a className="App-link-blue" href="">
-                  SEND
+                {t("sendButton")}
                 </a>
               </div>
             </div>
@@ -56,7 +59,7 @@ export default function contactUs() {
                 <AnyReactComponent
                   lat={59.955413}
                   lng={30.337844}
-                  text="My Marker"
+                  text={t("markerText")}
                 />
               </GoogleMapReact>
             </div>

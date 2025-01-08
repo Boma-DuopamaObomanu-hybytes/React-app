@@ -1,20 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "../src/styles/App.css";
-import Header from "./Components/header";
-import RepairMaintain from "./Components/repairMaintain";
-import Feature from "./Components/feature";
-import AboutUs from "./Components/about";
-import Professional from "./Components/professional";
-import Service from "./Components/service";
-import Client from "./Components/client";
-import ContactUs from "./Components/contactUs";
-import Navbar from "./Components/navbar";
-import Footer from "./Components/footer";
+import Header from "./Components/header.js";
+import RepairMaintain from "./Components/repairMaintain.js";
+import Feature from "./Components/feature.js";
+import AboutUs from "./Components/about.js";
+import Professional from "./Components/professional.js";
+import Service from "./Components/service.js";
+import Client from "./Components/client.js";
+import ContactUs from "./Components/contactUs.js";
+import Navbar from "./Components/navbar.js";
+import Footer from "./Components/footer.js";
+import { useTranslation } from "react-i18next";
 
 function App() {
+
+  const [direction, setDirection] = useState("ltr"); // Default to English (LTR)
+  const { t, i18n } = useTranslation();
+
+  const switchToArabic = () => {
+    i18n.changeLanguage("ar");
+    setDirection("rtl");
+     // 'ar' is the language code for Arabic
+  };
+
+  const switchToEnglish = () => {
+    i18n.changeLanguage("en"); 
+    setDirection("ltr");
+    // 'en' is the language code for English
+  };
   
 
   return (
@@ -34,7 +50,7 @@ function App() {
       
       */
 
-    <div>
+    <div className="App"style={{ direction: direction }} >
       <Header />
       <Navbar />
       <RepairMaintain />
@@ -44,10 +60,7 @@ function App() {
       <Service />
       <Client />
       <ContactUs />
-      <Footer />
-
-
-      <a href="/learn-react">Learn React</a>
+      <Footer switchToArabic={switchToArabic} switchToEnglish={switchToEnglish} />
 
     </div>
   );

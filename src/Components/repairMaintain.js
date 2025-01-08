@@ -1,21 +1,22 @@
 import React from 'react'
 import slider from "../images/images/slider-img.png";
+import { useTranslation } from "react-i18next";
 
-export default function repairMaintain() {
+export default function RepairMaintain() {
+    const { t } = useTranslation();
+
+
   return (
     <div>
        <section className="App-section">
           <div className="App-main-layout">
             <div className="App-text-container">
-              <h1 className="App-h1-text">Repair and Maintenance Services</h1>
+              <h1 className="App-h1-text">{t("repairMaintain.header")}</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                harum voluptatem adipisci. Quos molestiae saepe dicta nobis
-                pariatur, tempora iusto, ad possimus soluta hic praesentium
-                mollitia consequatur beatae, aspernatur culpa.
+              {t("repairMaintain.text")}
               </p>
               <a className="App-link-orange" href="">
-                Contact Us
+              {t("repairMaintain.contactUs")}
               </a>
             </div>
             <div className="App-image-container">

@@ -1,8 +1,10 @@
 import React, { useState} from "react";
-import client2 from "../images/images/client-1.jpg";
+import client2 from "../images/images/client-2.jpg";
 import client1 from "../images/images/client-1.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function Client() {
+    const { t } = useTranslation();
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,15 +31,15 @@ export default function Client() {
     const testimonials = [
         
         {
-          name: "Jorch Morik",
+          name: t("testimonials.0.name"),
           image: client1,
-          text: "Chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+          text: t("testimonials.0.text"),
           rating: 5,
         },
         {
-          name: "Jorch Morik",
+          name: t("testimonials.1.name"),
           image: client2,
-          text: "Chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.",
+          text: t("testimonials.1.text"),
           rating: 5,
         },
       ];
@@ -49,7 +51,7 @@ export default function Client() {
     
     <div>
        <div>
-          <h2 className="App-context-header">WHAT OUR CLIENT SAYS</h2>
+          <h2 className="App-context-header">{t("header")}</h2>
         </div>
 
         <div className="testimonial-container">
@@ -91,12 +93,14 @@ export default function Client() {
                 className="fa fa-long-arrow-left"
                 style={{ color: "white" }}
               ></i>
+              {/* {t("buttons.prev")} */}
             </button>
             <button onClick={handleNext} className="btn">
               <i
                 className="fa fa-long-arrow-right"
                 style={{ color: "white" }}
               ></i>
+              {/* {t("buttons.next")} */}
             </button>
           </div>
         </div>
