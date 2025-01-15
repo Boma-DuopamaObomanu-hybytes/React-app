@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "font-awesome/css/font-awesome.min.css";
@@ -19,6 +19,38 @@ function App() {
 
   const [direction, setDirection] = useState("ltr"); // Default to English (LTR)
   const { t, i18n } = useTranslation();
+
+  const canonicalUrl = i18n.language === "ar"
+  ? "https://example.com/ar/mainPage"
+  : "https://example.com/en/mainPage";
+
+
+  const updateDirection = (lang) => {
+    if (lang === "ar") {
+      setDirection("rtl");
+    } else {
+      setDirection("ltr");
+    }
+  };
+
+  // Run on language change
+  useEffect(() => {
+    updateDirection(i18n.language); // Set initial direction based on the current language
+
+    // Listen for language changes and update direction
+    const handleLanguageChange = (lang) => {
+      updateDirection(lang);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, [i18n]);
+
+
 
   const switchToArabic = () => {
     i18n.changeLanguage("ar");
@@ -51,6 +83,10 @@ function App() {
       */
 
     <div className="App"style={{ direction: direction }} >
+       <head>
+        <link rel="canonical" href={canonicalUrl} />
+        </head>
+
       <Header />
       <Navbar />
       <RepairMaintain />
